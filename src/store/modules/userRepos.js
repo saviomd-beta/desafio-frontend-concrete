@@ -6,6 +6,8 @@ const userRepos = {
     repositories: [],
   },
   getters: {
+    repositoriesByName: state => _.sortBy(state.repositories, ['name']),
+    repositoriesByLanguage: state => _.sortBy(state.repositories, ['language']),
     repositoriesByStars: state => _.sortBy(state.repositories, ['stargazers_count']).reverse(),
   },
   mutations: {

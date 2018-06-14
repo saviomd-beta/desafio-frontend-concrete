@@ -1,6 +1,6 @@
 <template lang="pug">
   ul
-    li(v-for='item in items', :key='item.login', :value='item.login')
+    li(v-for='item in items', :key='item.login')
       link-user(:user='item')
 </template>
 
