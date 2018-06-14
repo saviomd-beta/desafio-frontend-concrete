@@ -5,6 +5,7 @@ import App from './App';
 import router from './router';
 
 import '../node_modules/normalize.css/normalize.css';
+import './css/style.css';
 
 Vue.config.productionTip = false;
 

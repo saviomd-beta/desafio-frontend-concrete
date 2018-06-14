@@ -1,0 +1,30 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+}
+
+a {
+  color: #00a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:focus,
+a:hover {
+  color: #00d;
+  text-decoration: underline;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px;
+  width: 100%;
+}
