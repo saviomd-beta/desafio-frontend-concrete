@@ -1,7 +1,12 @@
+import _ from 'lodash';
+
 const userRepos = {
   namespaced: true,
   state: {
     repositories: [],
+  },
+  getters: {
+    repositoriesByStars: state => _.sortBy(state.repositories, ['stargazers_count']).reverse(),
   },
   mutations: {
     updateRepositories(state, payload) {

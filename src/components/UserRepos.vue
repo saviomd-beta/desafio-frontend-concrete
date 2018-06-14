@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     repositories() {
-      return store.state.userRepos.repositories;
+      return store.getters['userRepos/repositoriesByStars'];
     },
   },
   mounted: function mounted() {

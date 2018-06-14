@@ -2,6 +2,8 @@
   router-link(:to='targetRoute')
     div= '{{ repository.name }}'
     div= '{{ repository.description }}'
+    div= 'Language: {{ repository.language }}'
+    div= 'Stars: {{ repository.stargazers_count }}'
 </template>
 
 <script>
