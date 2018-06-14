@@ -5,16 +5,20 @@
       li(v-for='repository in repositories',
         :key='repository.name', :value='repository.name'
       )
-        = '{{ repository.name }}'
+        link-repo(:repository='repository')
 </template>
 
 <script>
+import LinkRepo from '@/components/LinkRepo';
 import store from '@/store';
 
 export default {
   name: 'UserRepos',
   props: {
     login: { type: String, required: true },
+  },
+  components: {
+    'link-repo': LinkRepo,
   },
   computed: {
     repositories() {
