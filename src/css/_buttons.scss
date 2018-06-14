@@ -1,0 +1,41 @@
+$buttons: (
+  primary: (
+    #fff,
+    $color-primary,
+    $color-primary-light
+  ),
+  secondary: (
+    #fff,
+    $color-secondary,
+    $color-secondary-light
+  )
+);
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:focus,
+.btn:hover {
+  text-decoration: none;
+}
+
+@each $name, $colors in $buttons {
+
+  .btn--#{$name} {
+    background-color: nth($colors, 2);
+    color: nth($colors, 1);
+  }
+
+  .btn--#{$name}:focus,
+  .btn--#{$name}:hover {
+    background-color: nth($colors, 3);
+    color: nth($colors, 1);
+  }
+
+}

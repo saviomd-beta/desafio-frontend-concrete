@@ -1,6 +1,6 @@
 <template lang="pug">
   header.container
-    router-link(to='/')= 'Github user search'
+    router-link(to='/')= 'GitHub User Search'
 </template>
 
 <script>
