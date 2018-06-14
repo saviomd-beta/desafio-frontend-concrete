@@ -3,9 +3,15 @@
     h1
       router-link(:to='targetRoute')= '{{ login }}'
       = '/{{ name }}'
+    div(v-if='repository.description')= '{{ repository.description }}'
+    div= 'Stars: {{ repository.stargazers_count }}'
+    div= 'Language: {{ repository.language }}'
+    a(:href='repository.html_url', target='_blank')= 'View on GitHub'
 </template>
 
 <script>
+import store from '@/store';
+
 export default {
   name: 'RepoDetails',
   props: {
@@ -13,6 +19,9 @@ export default {
     name: { type: String, required: true },
   },
   computed: {
+    repository() {
+      return store.state.repos.repository;
+    },
     targetRoute() {
       return {
         name: 'User',
@@ -21,6 +30,10 @@ export default {
         },
       };
     },
+  },
+  mounted: function mounted() {
+    const fullName = `${this.login}/${this.name}`;
+    store.dispatch('repos/fetchData', fullName);
   },
 };
 </script>
