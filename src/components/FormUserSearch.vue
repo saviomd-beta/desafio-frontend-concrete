@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import router from '@/router';
 import store from '@/store';
 
 export default {
@@ -18,7 +19,9 @@ export default {
     submitUserSearch(event) {
       event.preventDefault();
       const searchString = this.searchString.trim().toLowerCase();
-      store.dispatch('searchUsers/fetchData', searchString);
+      store.dispatch('searchUsers/fetchData', searchString).then(() => {
+        router.push({ name: 'UserSearchResult', query: { q: searchString } });
+      });
     },
   },
 };
