@@ -1,26 +1,26 @@
-const users = {
+const userRepos = {
   namespaced: true,
   state: {
-    user: {},
+    repositories: [],
   },
   mutations: {
-    updateUser(state, payload) {
-      state.user = payload.user;
+    updateRepositories(state, payload) {
+      state.repositories = payload.repositories;
     },
   },
   actions: {
     fetchData(context, login) {
       return new Promise((resolve, reject) => {
-        fetch(`https://api.github.com/users/${login}`).then((response) => {
+        fetch(`https://api.github.com/users/${login}/repos`).then((response) => {
           if (!response.ok) {
             throw Error(response.statusText);
           }
           return response.json();
         }).then((json) => {
           const payload = {
-            user: json,
+            repositories: json,
           };
-          context.commit('updateUser', payload);
+          context.commit('updateRepositories', payload);
           resolve();
         }).catch((error) => {
           // eslint-disable-next-line no-console
@@ -32,4 +32,4 @@ const users = {
   },
 };
 
-export default users;
+export default userRepos;
