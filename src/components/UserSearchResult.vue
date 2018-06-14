@@ -1,7 +1,7 @@
 <template lang="pug">
   ul
-    li(v-for='item in items', :key='item.id', :value='item.id')
-      router-link(:to='{ name: "User", params: { id: item.login } }')= '{{ item.login }}'
+    li(v-for='item in items', :key='item.login', :value='item.login')
+      router-link(:to='{ name: "User", params: { login: item.login } }')= '{{ item.login }}'
 </template>
 
 <script>
