@@ -15,7 +15,11 @@ export default {
   computed: {
     targetRoute() {
       return {
-        name: 'Home',
+        name: 'Repository',
+        params: {
+          login: this.$route.params.login,
+          name: this.repository.name,
+        },
       };
     },
   },
