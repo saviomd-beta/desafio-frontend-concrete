@@ -1,6 +1,6 @@
 <template lang="pug">
-  router-link(:to='targetRoute')
-    img(:alt='user.login_avatar', :src='user.avatar_url', width='32')
+  router-link.user(:to='targetRoute')
+    img.user__avatar(:alt='user.login_avatar', :src='user.avatar_url', width='32')
     = ' {{ user.login }}'
 </template>
 
@@ -22,3 +22,29 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.user {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  display: block;
+  line-height: 32px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  &:focus,
+  &:hover {
+    background: #eee;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.user__avatar {
+  background: #eee;
+  border: 1px solid #ccc;
+  height: 32px;
+  vertical-align: middle;
+  width: 32px;
+}
+</style>

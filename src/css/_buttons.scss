@@ -18,11 +18,10 @@ $buttons: (
   padding: 5px 10px;
   text-align: center;
   transition: 0.3s;
-}
-
-.btn:focus,
-.btn:hover {
-  text-decoration: none;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @each $name, $colors in $buttons {
@@ -30,12 +29,11 @@ $buttons: (
   .btn--#{$name} {
     background-color: nth($colors, 2);
     color: nth($colors, 1);
-  }
-
-  .btn--#{$name}:focus,
-  .btn--#{$name}:hover {
-    background-color: nth($colors, 3);
-    color: nth($colors, 1);
+    &:focus,
+    &:hover {
+      background-color: nth($colors, 3);
+      color: nth($colors, 1);
+    }
   }
 
 }

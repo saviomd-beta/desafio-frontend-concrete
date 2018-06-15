@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
   border-top: 1px solid #ccc;
   font-size: 14px;

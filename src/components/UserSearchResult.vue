@@ -23,3 +23,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: 10px;
+}
+</style>
