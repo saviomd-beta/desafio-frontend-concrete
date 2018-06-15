@@ -1,9 +1,11 @@
 <template lang="pug">
   div
-    h2= 'Repositories'
-    select(v-model='currentRepoOrder')
-      option(v-for='repoOrder in repoOrders', :key='repoOrder.id', :value='repoOrder.id')
-        = '{{ repoOrder.name }}'
+    h2= 'Repositories ({{ repositories.length }})'
+    div
+      = 'Order by '
+      select(v-model='currentRepoOrder')
+        option(v-for='repoOrder in repoOrders', :key='repoOrder.id', :value='repoOrder.id')
+          = '{{ repoOrder.name }}'
     ul
       li(v-for='repository in repositories', :key='repository.name')
         link-repo(:repository='repository')
@@ -48,3 +50,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: 10px;
+}
+</style>

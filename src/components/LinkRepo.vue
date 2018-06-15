@@ -1,9 +1,10 @@
 <template lang="pug">
-  router-link(:to='targetRoute')
-    div= '{{ repository.name }}'
-    div(v-if='repository.description')= '{{ repository.description }}'
-    div= 'Language: {{ repository.language }}'
-    div= 'Stars: {{ repository.stargazers_count }}'
+  router-link.repo(:to='targetRoute')
+    .repo__name= '{{ repository.name }}'
+    .repo__description(v-if='repository.description')= '{{ repository.description }}'
+    .repo__details
+      = 'Stars: {{ repository.stargazers_count }}'
+      span(v-if='repository.language')= ' - Language: {{ repository.language }}'
 </template>
 
 <script>
@@ -25,3 +26,34 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.repo {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  display: block;
+  font-weight: normal;
+  padding: 5px 10px;
+  transition: 0.3s;
+  &:focus,
+  &:hover {
+    background: #eee;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.repo__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.repo__description {
+  margin-bottom: 10px;
+}
+
+.repo__details {
+  font-size: 14px;
+}
+</style>
