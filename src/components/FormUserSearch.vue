@@ -1,6 +1,7 @@
 <template lang="pug">
   form.form(@submit='submitUserSearch')
-    input.form__control(placeholder='Type a username...', required, type='text', v-model='searchString')
+    input.form__control(placeholder='Type a username...', required,
+      type='text', v-model='searchString')
     button.btn.btn--primary(type='submit')= 'Search'
 </template>
 
@@ -26,3 +27,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.form {
+  display: flex;
+}
+
+.form__control {
+  flex-grow: 1;
+  width: auto;
+}
+</style>
