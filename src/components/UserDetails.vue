@@ -2,7 +2,7 @@
   .component
     h1.title= '{{ login }}'
     div(v-if='user')
-      img.avatar(:alt='user.login', :src='user.avatar_url')
+      img.avatar(:alt='imgAvatarAlt', :src='user.avatar_url')
       .info= 'Bio: {{ user.bio }}'
       .info= 'Email: {{ user.email }}'
       .info= 'Followers: {{ user.followers }}'
@@ -18,6 +18,9 @@ export default {
     login: { type: String, required: true },
   },
   computed: {
+    imgAvatarAlt() {
+      return `${this.login} avatar`;
+    },
     user() {
       const user = store.state.users.user;
       user.bio = user.bio || '--';

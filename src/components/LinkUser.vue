@@ -1,6 +1,6 @@
 <template lang="pug">
   router-link.user(:to='targetRoute')
-    img.user__avatar(:alt='user.login_avatar', :src='user.avatar_url')
+    img.user__avatar(:alt='imgAvatarAlt', :src='user.avatar_url')
     = ' {{ user.login }}'
 </template>
 
@@ -11,6 +11,9 @@ export default {
     user: { type: Object, required: true },
   },
   computed: {
+    imgAvatarAlt() {
+      return `${this.user.login} avatar`;
+    },
     targetRoute() {
       return {
         name: 'User',
