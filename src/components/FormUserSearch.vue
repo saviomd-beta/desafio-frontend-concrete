@@ -1,6 +1,6 @@
 <template lang="pug">
   form(@submit='submitUserSearch')
-    input(placeholder='Type a username...', required, type='text', v-model='searchString')
+    input.form-control(placeholder='Type a username...', required, type='text', v-model='searchString')
     button.btn.btn--primary(type='submit')= 'Search'
 </template>
 

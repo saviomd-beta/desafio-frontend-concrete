@@ -12,7 +12,7 @@ $buttons: (
 );
 
 .btn {
-  border: 0;
+  border: 1px solid #ccc;
   border-radius: ($base-size / 2);
   display: inline-block;
   padding: ($base-size / 2) $base-size;
@@ -28,6 +28,7 @@ $buttons: (
 
   .btn--#{$name} {
     background-color: nth($colors, 2);
+    border-color: nth($colors, 2);
     color: nth($colors, 1);
     &:focus,
     &:hover {

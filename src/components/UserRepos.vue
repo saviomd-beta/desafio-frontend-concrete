@@ -3,7 +3,7 @@
     h2.title.title--sub= 'Repositories ({{ repositories.length }})'
     .order-by
       = 'Order by '
-      select(v-model='currentRepoOrder')
+      select.form-control(v-model='currentRepoOrder')
         option(v-for='repoOrder in repoOrders', :key='repoOrder.id', :value='repoOrder.id')
           = '{{ repoOrder.name }}'
     ul
