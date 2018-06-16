@@ -17,7 +17,7 @@ $buttons: (
   display: inline-block;
   padding: ($base-size / 2) $base-size;
   text-align: center;
-  transition: 0.3s;
+  transition: $base-speed;
   &:focus,
   &:hover {
     text-decoration: none;

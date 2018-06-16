@@ -33,7 +33,7 @@ export default {
   display: block;
   line-height: ($base-size * 2);
   padding: ($base-size / 2) $base-size;
-  transition: 0.3s;
+  transition: $base-speed;
   &:focus,
   &:hover {
     background: #eee;

@@ -37,7 +37,7 @@ export default {
   display: block;
   font-weight: normal;
   padding: ($base-size / 2) $base-size;
-  transition: 0.3s;
+  transition: $base-speed;
   &:focus,
   &:hover {
     background: #eee;
