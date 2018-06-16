@@ -32,20 +32,6 @@ export default {
   padding: ($base-size * 2) 0;
 }
 
-.sidebar {
-  padding: 0 $base-size;
-  width: 100%;
-  @media (min-width: $screen-sm) {
-    width: percentage(5/12);
-  }
-  @media (min-width: $screen-md) {
-    width: percentage(4/12);
-  }
-  @media (min-width: $screen-lg) {
-    width: percentage(3/12);
-  }
-}
-
 .main {
   padding: 0 $base-size;
   width: 100%;
@@ -57,6 +43,20 @@ export default {
   }
   @media (min-width: $screen-lg) {
     width: percentage(9/12);
+  }
+}
+
+.sidebar {
+  padding: 0 $base-size;
+  width: 100%;
+  @media (min-width: $screen-sm) {
+    width: percentage(5/12);
+  }
+  @media (min-width: $screen-md) {
+    width: percentage(4/12);
+  }
+  @media (min-width: $screen-lg) {
+    width: percentage(3/12);
   }
 }
 </style>

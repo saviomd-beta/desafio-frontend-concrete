@@ -1,12 +1,16 @@
 <template lang="pug">
-  div
+  .component
     h1
       router-link(:to='targetRoute')= '{{ login }}'
       = '/{{ name }}'
-    div(v-if='repository.description')= '{{ repository.description }}'
-    div= 'Stars: {{ repository.stargazers_count }}'
-    div= 'Language: {{ repository.language }}'
-    a.btn.btn--secondary(:href='repository.html_url', target='_blank')= 'View on GitHub'
+    .wrapper
+      .main
+        .description(v-if='repository.description')= '{{ repository.description }}'
+        a.btn.btn--secondary(:href='repository.html_url', target='_blank')= 'View on GitHub'
+      .sidebar
+        .info
+          div= 'Stars: {{ repository.stargazers_count }}'
+          div= 'Language: {{ repository.language }}'
 </template>
 
 <script>
@@ -37,3 +41,45 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../css/_variables";
+
+.component {
+  padding: ($base-size * 2) 0;
+}
+
+.description {
+  font-size: ($base-size * 1.2);
+  margin-bottom: $base-size;
+}
+
+.info {
+  border: 1px solid #ccc;
+  border-radius: ($base-size / 2);
+  padding: $base-size;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$base-size;
+}
+
+.main {
+  padding: 0 $base-size;
+  width: 100%;
+  @media (min-width: $screen-md) {
+    width: percentage(8/12);
+  }
+}
+
+.sidebar {
+  padding: 0 $base-size;
+  width: 100%;
+  @media (min-width: $screen-md) {
+    width: percentage(4/12);
+  }
+}
+
+</style>
