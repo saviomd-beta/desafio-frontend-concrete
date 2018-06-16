@@ -57,10 +57,11 @@ export default {
 }
 
 .repo__description {
-  margin-bottom: $base-size;
+  color: #666;
 }
 
 .repo__details {
   font-size: ($base-size * 0.8);
+  margin-top: $base-size;
 }
 </style>
