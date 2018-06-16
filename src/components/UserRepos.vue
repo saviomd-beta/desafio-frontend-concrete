@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h2= 'Repositories ({{ repositories.length }})'
+    h2.title.title--sub= 'Repositories ({{ repositories.length }})'
     div
       = 'Order by '
       select(v-model='currentRepoOrder')

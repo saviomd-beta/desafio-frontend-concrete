@@ -1,6 +1,6 @@
 <template lang="pug">
   .component
-    h1
+    h1.title
       router-link(:to='targetRoute')= '{{ login }}'
       = '/{{ name }}'
     .wrapper

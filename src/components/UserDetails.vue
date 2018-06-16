@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    h1= '{{ login }}'
+    h1.title= '{{ login }}'
     div(v-if='user')
       img(:alt='user.login', :src='user.avatar_url', width='64')
       div= 'Bio: {{ user.bio }}'
