@@ -28,6 +28,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../css/_variables";
+
 .repo {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -45,8 +47,13 @@ export default {
 }
 
 .repo__name {
+  color: $color-primary;
   font-size: 18px;
   font-weight: bold;
+  .repo:focus &,
+  .repo:hover & {
+    color: $color-primary-light;
+  }
 }
 
 .repo__description {

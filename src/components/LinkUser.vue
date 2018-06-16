@@ -24,10 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../css/_variables";
+
 .user {
   border: 1px solid #ccc;
   border-radius: 5px;
-  color: #333;
+  color: $color-primary;
   display: block;
   line-height: 32px;
   padding: 5px 10px;
@@ -35,7 +37,7 @@ export default {
   &:focus,
   &:hover {
     background: #eee;
-    color: #333;
+    color: $color-primary-light;
     text-decoration: none;
   }
 }
