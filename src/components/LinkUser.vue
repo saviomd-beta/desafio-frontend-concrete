@@ -1,7 +1,7 @@
 <template lang="pug">
   router-link.user(:to='targetRoute')
     img.user__avatar(:alt='imgAvatarAlt', :src='user.avatar_url')
-    = ' {{ user.login }}'
+    = '{{ user.login }}'
 </template>
 
 <script>
@@ -49,6 +49,7 @@ export default {
   background: #eee;
   border: 1px solid #ccc;
   height: ($base-size * 2);
+  margin-right: ($base-size / 4);
   vertical-align: middle;
   width: ($base-size * 2);
 }
