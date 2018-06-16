@@ -63,7 +63,7 @@ export default {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$base-size;
+  margin: 0 (-$base-size);
 }
 
 .main {
