@@ -32,11 +32,11 @@ export default {
 
 .repo {
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: ($base-size / 2);
   color: #333;
   display: block;
   font-weight: normal;
-  padding: 5px 10px;
+  padding: ($base-size / 2) $base-size;
   transition: 0.3s;
   &:focus,
   &:hover {
@@ -48,7 +48,7 @@ export default {
 
 .repo__name {
   color: $color-primary;
-  font-size: 18px;
+  font-size: ($base-size * 1.2);
   font-weight: bold;
   .repo:focus &,
   .repo:hover & {
@@ -57,10 +57,10 @@ export default {
 }
 
 .repo__description {
-  margin-bottom: 10px;
+  margin-bottom: $base-size;
 }
 
 .repo__details {
-  font-size: 14px;
+  font-size: ($base-size * 0.8);
 }
 </style>

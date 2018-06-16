@@ -13,9 +13,9 @@ $buttons: (
 
 .btn {
   border: 0;
-  border-radius: 5px;
+  border-radius: ($base-size / 2);
   display: inline-block;
-  padding: 5px 10px;
+  padding: ($base-size / 2) $base-size;
   text-align: center;
   transition: 0.3s;
   &:focus,

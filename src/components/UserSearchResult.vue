@@ -25,13 +25,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../css/_variables";
+
 ul {
   list-style: none;
-  margin: 0 0 10px;
+  margin: 0 0 $base-size;
   padding: 0;
 }
 
 ul > li {
-  margin-bottom: 10px;
+  margin-bottom: $base-size;
 }
 </style>

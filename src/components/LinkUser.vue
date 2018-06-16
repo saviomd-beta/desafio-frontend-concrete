@@ -28,11 +28,11 @@ export default {
 
 .user {
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: ($base-size / 2);
   color: $color-primary;
   display: block;
-  line-height: 32px;
-  padding: 5px 10px;
+  line-height: ($base-size * 2);
+  padding: ($base-size / 2) $base-size;
   transition: 0.3s;
   &:focus,
   &:hover {
@@ -45,8 +45,8 @@ export default {
 .user__avatar {
   background: #eee;
   border: 1px solid #ccc;
-  height: 32px;
+  height: ($base-size * 2);
   vertical-align: middle;
-  width: 32px;
+  width: ($base-size * 2);
 }
 </style>

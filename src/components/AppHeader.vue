@@ -10,14 +10,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../css/_variables";
+
 header {
   background: #000;
   color: #eee;
-  padding: 10px;
+  padding: $base-size;
 }
 
 a {
   color: #fff;
-  font-size: 18px;
+  font-size: ($base-size * 1.2);
 }
 </style>

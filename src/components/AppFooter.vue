@@ -11,10 +11,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../css/_variables";
+
 footer {
   border-top: 1px solid #ccc;
-  font-size: 14px;
-  padding: 10px;
+  font-size: ($base-size * 0.8);
+  padding: $base-size;
   text-align: center;
 }
 </style>
