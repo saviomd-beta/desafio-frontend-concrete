@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     h2.title.title--sub= 'Repositories ({{ repositories.length }})'
-    div
+    .order-by
       = 'Order by '
       select(v-model='currentRepoOrder')
         option(v-for='repoOrder in repoOrders', :key='repoOrder.id', :value='repoOrder.id')
@@ -54,6 +54,12 @@ export default {
 <style lang="scss" scoped>
 @import "../css/_variables";
 
+.order-by {
+  font-size: ($base-size * 0.8);
+  margin: 0 0 $base-size;
+  text-align: right;
+}
+
 ul {
   list-style: none;
   margin: 0 0 $base-size;
@@ -61,6 +67,6 @@ ul {
 }
 
 ul > li {
-  margin-bottom: $base-size;
+  margin: 0 0 $base-size;
 }
 </style>

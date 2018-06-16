@@ -1,12 +1,12 @@
 <template lang="pug">
-  div
+  .component
     h1.title= '{{ login }}'
     div(v-if='user')
-      img(:alt='user.login', :src='user.avatar_url', width='64')
-      div= 'Bio: {{ user.bio }}'
-      div= 'Email: {{ user.email }}'
-      div= 'Followers: {{ user.followers }}'
-      div= 'Following: {{ user.following }}'
+      img.avatar(:alt='user.login', :src='user.avatar_url')
+      .info= 'Bio: {{ user.bio }}'
+      .info= 'Email: {{ user.email }}'
+      .info= 'Followers: {{ user.followers }}'
+      .info= 'Following: {{ user.following }}'
 </template>
 
 <script>
@@ -30,3 +30,28 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../css/_variables";
+
+.component {
+  margin: 0 0 $base-size;
+}
+
+.title {
+  border-bottom: 1px solid #ccc;
+}
+
+.avatar {
+  background: #eee;
+  border: 1px solid #ccc;
+  height: auto;
+  max-width: 100%;
+  width: ($base-size * 16);
+}
+
+.info {
+  border-bottom: 1px solid #ccc;
+  padding: ($base-size / 4) 0;
+}
+</style>

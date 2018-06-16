@@ -1,6 +1,6 @@
 <template lang="pug">
   router-link.user(:to='targetRoute')
-    img.user__avatar(:alt='user.login_avatar', :src='user.avatar_url', width='32')
+    img.user__avatar(:alt='user.login_avatar', :src='user.avatar_url')
     = ' {{ user.login }}'
 </template>
 
