@@ -29,7 +29,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin: 0 (-$base-size);
-  padding: ($base-size * 2) 0;
 }
 
 .main {

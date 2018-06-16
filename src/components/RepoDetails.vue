@@ -1,5 +1,5 @@
 <template lang="pug">
-  .component
+  div
     h1.title
       router-link(:to='targetRoute')= '{{ login }}'
       = '/{{ name }}'
@@ -44,10 +44,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/_variables";
-
-.component {
-  padding: ($base-size * 2) 0;
-}
 
 .description {
   font-size: ($base-size * 1.2);
